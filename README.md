@@ -1,75 +1,47 @@
-# Nuxt Minimal Starter
+# 🎬 CineVault
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Современный каталог фильмов на Nuxt 3 с публичным сайтом и административной панелью.
 
-## Setup
+## Технологии
+- **Nuxt 3** (Vue 3 + TypeScript)
+- **Pinia** — управление состоянием
+- **TailwindCSS** — стилизация
+- **TMDB API** — данные о фильмах
+- **Chart.js** — аналитика
 
-Make sure to install dependencies:
+## Запуск проекта
 
+1. Клонировать репозиторий:
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+   git clone https://github.com/ТВОЙ_НИК/cinevault.git
+   cd cinevault
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
+2. Установить зависимости:
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+   npm install
 ```
 
-## Production
-
-Build the application for production:
-
+3. Создать `.env` файл:
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+   cp .env.example .env
+   # Вставить свой TMDB токен
 ```
 
-Locally preview production build:
-
+4. Запустить dev-сервер:
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+   npm run dev
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+5. Открыть [http://localhost:3000](http://localhost:3000)
+
+## Доступы в Админку
+
+- URL: `/admin/login`
+- Email: `admin@cinevault.com`
+- Пароль: `admin123`
+
+## Структура
+
+- `/` — публичный сайт (главная, каталог, страница фильма, о нас)
+- `/admin` — административная панель (dashboard, фильмы CRUD, жанры, пользователи, аналитика)
