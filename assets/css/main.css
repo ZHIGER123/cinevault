@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #E50914;
+    --color-gold: #F5C518;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-white font-sans antialiased;
+  }
+
+  /* Кастомный скроллбар */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-surface-secondary;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-tertiary rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold 
+           px-6 py-2.5 rounded-lg transition-all duration-200 
+           active:scale-95 cursor-pointer;
+  }
+
+  .btn-ghost {
+    @apply border border-white/20 hover:border-white/50 text-white 
+           font-medium px-6 py-2.5 rounded-lg transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl 
+           hover:shadow-primary/20;
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+
+  .skeleton {
+    @apply bg-surface-tertiary animate-pulse rounded;
+  }
+}
+
+/* Анимации переходов страниц */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s ease;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
